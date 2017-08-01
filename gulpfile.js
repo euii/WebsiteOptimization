@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
 gulp.task('minifyHtml', function() {
   return gulp.src('src/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(''))
     .pipe(notify({message:'html task complete'}));
 });
 
