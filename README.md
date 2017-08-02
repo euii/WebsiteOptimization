@@ -80,7 +80,7 @@ npm gulp -g
 
 ```bash
 npm gulp --save-dev
-npm install 安装依赖包
+npm install
 ```
 
 4. 优化index.html
