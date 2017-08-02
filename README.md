@@ -113,4 +113,9 @@ gulp pizza
 
 1. 修改js/main.js
 
-`453` 行，把```pizzaContainer[i].offsetWidth```从循环中取出。
+`453`行，把`pizzaContainer[i].offsetWidth`从循环中取出变成`pizzaContainer[0].offsetWidth`只读取一次值，然后一直使用。
+
+ `451`行，将 `document.querySelectorAll(".randomPizzaContainer")`变成一个变量，一次查询，多次使用。
+
+ `512`行附近，把`document.body.scrollTop/1250`从循环中取出，一次赋值，多次使用。
+
