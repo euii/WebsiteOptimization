@@ -58,12 +58,12 @@
         ├── css //未压缩的CSS
         │   ├── bootstrap-grid.css
         │   └── style.css
-        ├── images //未压缩的images
+        ├── images //未压缩的images
         │   ├── pizza.png
         │   └── pizzeria.jpg
         ├── js //未压缩的js
         │   └── main.js
-        └── pizza.html //未压缩的html
+        └── pizza.html //未压缩的html 
 ```
 
 ### 运行指南
@@ -117,5 +117,5 @@ gulp pizza
 
  `451` 行，将 `document.querySelectorAll(".randomPizzaContainer")` 变成一个变量，一次查询，多次使用。
 
- `512` 行附近，把 `document.body.scrollTop/1250` 从循环中取出，一次赋值，多次使用。
+ `512` 行附近，把 `document.body.scrollTop/1250` 从循环中取出，一次赋值，多次使用。
 
