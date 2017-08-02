@@ -100,11 +100,11 @@ gulp pizza
 ### 优化内容
 #### index页面
 1. 将 fonts.googleapis.com 引用注释掉
-2. 将 perfmatters.js 
-3. 将 http://www.google-analytics.com/analytics.js 标为async异步模式
+2. 将 perfmatters.js 压缩
+3. 将 http://www.google-analytics.com/analytics.js 改为async异步模式
 4. 将 style.css 压缩后变成内联模式
-5. 将 前三个链接的图片，从远程下载到本地并压缩
-6. 将 pizza图片的拷贝一份新的并改变大小并压缩
+5. 将 前三个链接的图片，从远程下载到本地并压缩href改为本地链接
+6. 将 pizza图片的拷贝一份新的并改变大小并压缩href指向新图片
 7. 将所有的css,image,js,html全部压缩
 
 #### 优化pizza网站
