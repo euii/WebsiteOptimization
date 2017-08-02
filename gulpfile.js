@@ -57,3 +57,34 @@ gulp.task('minifyHtml', function() {
 // });
 gulp.task('default', ['styles','images','scripts','imagesPizza','minifyHtml']);
 
+gulp.task('pizzaStyle',function(){
+    return gulp.src('views/src/css/*.css')
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(gulp.dest('views/css'))
+        .pipe(minifycss())
+        .pipe(gulp.dest('views/css'))
+        .pipe(notify({ message: 'Pizza styles task complete' }));
+})
+
+gulp.task('pizzaImages',function(){
+return gulp.src('views/src/images/*')
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('views/images'))
+    .pipe(notify({ message: 'Pizza images task complete' }));
+})
+
+gulp.task("pizzaJs",function(){
+return gulp.src('views/src/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('views/js'))
+    .pipe(notify({ message: 'Pizza scripts task complete' }));
+})
+
+gulp.task("pizzaHtml",function(){
+return gulp.src('views/src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('views'))
+    .pipe(notify({message:'Pizza html task complete'}));
+});
+
+gulp.task('pizza', ['pizzaStyle','pizzaImages','pizzaJs','pizzaHtml']);
