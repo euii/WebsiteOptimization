@@ -448,9 +448,10 @@ var resizePizzas = function (size) {
 
   // 遍历披萨的元素并改变它们的宽度
   function changePizzaSizes(size) {
-    var pizzaContainer = document.querySelectorAll(".randomPizzaContainer"); //read
+    var pizzaContainer = document.querySelectorAll(".randomPizzaContainer"); //一次读取创建引用即可，没有必要每次都读取。
     if (pizzaContainer && pizzaContainer.length > 0) {
-      var pizzaContainerWidth = pizzaContainer[0].offsetWidth; //
+      //观察发现pizza的大小是一致的，所以没有必要放在循环里读取每个pizza的宽度，只需要读取其中一个的宽度，然后使用即可。
+      var pizzaContainerWidth = pizzaContainer[0].offsetWidth; 
       var dx = determineDx(pizzaContainerWidth, size);
       var newwidth = (pizzaContainerWidth + dx) + 'px';
 
@@ -508,7 +509,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var scrollTop = document.body.scrollTop/1250; //我发现document.body.scrollTop永远是0，所以这个代码没有意义
+  var scrollTop = document.body.scrollTop/1250; //更新位置的时候，没有必要放在循环了，每次都查询。【我发现document.body.scrollTop永远是0，所以这个代码没有意义】
   console.log("scrollTop"+scrollTop);
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
