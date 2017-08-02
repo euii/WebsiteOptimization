@@ -1,6 +1,7 @@
 ## 网站性能优化项目
 
 ### 项目目录结构介绍
+
 ```
 .
 ├── README.md  //说明
@@ -99,6 +100,7 @@ gulp pizza
 
 ### 优化内容
 #### index页面
+
 1. 将 fonts.googleapis.com 引用注释掉
 2. 将 perfmatters.js 压缩
 3. 将 http://www.google-analytics.com/analytics.js 改为async异步模式
@@ -108,3 +110,7 @@ gulp pizza
 7. 将所有的css,image,js,html全部压缩
 
 #### 优化pizza网站
+
+1. 修改js/main.js
+
+`453` 行，把```pizzaContainer[i].offsetWidth```从循环中取出。
