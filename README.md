@@ -5,7 +5,7 @@
 .
 ├── README.md  //说明
 ├── dist //发布生成目录
-│   ├── css 
+│   ├── css
 │   │   ├── print.css
 │   │   ├── print.min.css
 │   │   ├── style.css
@@ -27,7 +27,7 @@
 ├── project-2048.html
 ├── project-mobile.html
 ├── project-webperf.html
-├── src  //源文件的目录，未压缩的
+├── src  //源文件的目录，未压缩的
 │   ├── images
 │   │   ├── 2048.png
 │   │   ├── buildYourOwn.jpg
@@ -53,7 +53,7 @@
     ├── js //压缩发布JS目录
     │   └── main.js
     ├── pizza.html //压缩发布文件
-    └── src //源文件目录
+    └── src  //源文件目录
         ├── css //未压缩的CSS
         │   ├── bootstrap-grid.css
         │   └── style.css
